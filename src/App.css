@@ -1,38 +1,57 @@
+/* BLUEPRINT REACT UI LIBRARY */
+@import "~normalize.css";
+@import "~@blueprintjs/core/lib/css/blueprint.css";
+@import "~@blueprintjs/icons/lib/css/blueprint-icons.css";
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.reset_nav_links {
+  list-style: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* HEADER */
+
+.show_m_navigation {
+  display: none;
+}
+.burger_menu {
+  display: none;
+}
+
+@media only screen and (max-width: 525px) {
+  .burger_menu {
+    display: block;
+    color: #000;
+  }
+
+  .hide_main_menu {
+    display: none;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (min-width: 525px) {
+  .burger_menu {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .show_m_navigation {
+    display: none !important;
+  }
+}
+
+/* RECIPE */
+
+@media only screen and (min-width: 1024px) {
+  .lg_grid_cols_3 {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 1536px) {
+  .increase_text_size_2xlscreen {
+    font-size: 1.375rem;
+    line-height: 2rem;
   }
 }
