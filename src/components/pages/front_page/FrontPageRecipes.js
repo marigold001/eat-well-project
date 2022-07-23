@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export function RecipesAndBlog(props) {
+export function FrontPageRecipes(props) {
   const RECIPES = [
     {
       id: 1,
@@ -40,27 +40,41 @@ export function RecipesAndBlog(props) {
     },
   ];
 
-  function showFiveResults(array) {
-    return array.length <= 5;
-  }
-  console.log(RECIPES.filter(recipe => recipe.category == "Favorite"));
   return (
     // style={{backgroundColor: "#2C1A2B"}}
-    <div className="container mx-auto pb-6 mb-6 text-white bg-stone-700 italic font-serif justify-between ">
-      <div>
-        <h2 className="mx-auto pt-6 text-3xl mt-4 mb-16">RECIPES</h2>
-        <h3 className="text-xl">Favorite</h3>
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 w-2/3 mx-auto">
+    <div className="container mx-auto pb-6 mb-6 italic font-serif justify-between ">
+      <div className="mx-4 sm:mx-12 lg:mx-0">
+        <h2 className="mx-auto pt-6 text-4xl mt-4 mb-16">RECIPES</h2>
+        <h3 className="text-xl">FAVORITE</h3>
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 mx-auto lg:mx-12">
           {props.recipes.filter(recipe => recipe.category === "Favorite").map((recipe) => {
             return (
-              <div key={recipe.id}>
-                <Link to={`/recipes/${recipe.id}`} key={recipe.id} className="text-white">
-                  <h3 className="text-xl my-2">{recipe.title.toUpperCase( )}</h3>
+              <div key={recipe.id} className="mt-20">
+                <Link to={`/recipes/${recipe.id}`} key={recipe.id}>
                   <img
                     src={require(`../../../assets/images/recipes/${recipe.img}`)}
                     alt={recipe.title}
-                    className="h-full w-full object-cover"
+                    className="h-full md:h-full lg:h-64 w-full lg:object-cover object-cover  reduce-image-size-hover"
                   />
+                  <h3 className="text-xl my-2">{recipe.title}</h3>
+                </Link>
+              </div>
+            );
+          }).splice(0, 4)}
+        </div>
+
+        <h3 className="text-xl mt-28">VEGETABLES</h3>
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 mx-auto lg:mx-12">
+          {props.recipes.filter(recipe => recipe.category === "Vegetables").map((recipe) => {
+            return (
+              <div key={recipe.id} className="h-80 mt-20">
+                <Link to={`/recipes/${recipe.id}`} key={recipe.id} className="text-white">
+                  <img
+                    src={require(`../../../assets/images/recipes/${recipe.img}`)}
+                    alt={recipe.title}
+                    className="h-full md:h-full lg:h-64 w-full lg:object-cover object-cover"
+                  />
+                  <h3 className="text-xl my-2">{recipe.title.toUpperCase( )}</h3>
                 </Link>
               </div>
             );
