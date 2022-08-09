@@ -48,97 +48,97 @@ const RECIPES = [
     category: "Favorite"
   },
   {
-    id: 1,
+    id: 9,
     title: "Quinoa Salad",
     img: "mediterranean_quinoa_salad.jpg",
     category: "Vegetarian"
   },
   {
-    id: 2,
+    id: 10,
     title: "Green Beans",
     img: "roasted_green_beans.jpg",
     category: "Vegetarian"
   },
   {
-    id: 3,
+    id: 11,
     title: "Frittata",
     img: "frittata.jpg",
     category: "Vegetarian"
   },
   {
-    id: 4,
+    id: 12,
     title: "Black rice",
     img: "black_rice.jpg",
     category: "Vegetarian"
   },
   {
-    id: 5,
+    id: 13,
     title: "Mushrooms",
     img: "mushrooms.jpg",
     category: "Favorite"
   },
   {
-    id: 6,
+    id: 14,
     title: "Zucchini",
     img: "zucchini.jpg",
     category: "Favorite"
   },
   {
-    id: 7,
+    id: 15,
     title: "Quinoa Salad",
     img: "quinoa_salad.jpg",
     category: "Favorite"
   },
   {
-    id: 8,
+    id: 16,
     title: "Ceasar Salad",
     img: "ceasar-salad.jpg",
     category: "Favorite"
   },
   {
-    id: 1,
+    id: 17,
     title: "Quinoa Salad",
     img: "mediterranean_quinoa_salad.jpg",
     category: "Vegetarian"
   },
   {
-    id: 2,
+    id: 18,
     title: "Green Beans",
     img: "roasted_green_beans.jpg",
     category: "Vegetarian"
   },
   {
-    id: 3,
+    id: 19,
     title: "Frittata",
     img: "frittata.jpg",
     category: "Vegetarian"
   },
   {
-    id: 4,
+    id: 20,
     title: "Black rice",
     img: "black_rice.jpg",
     category: "Vegetarian"
   },
   {
-    id: 5,
+    id: 21,
     title: "Mushrooms",
     img: "mushrooms.jpg",
     category: "Favorite"
   },
   {
-    id: 6,
+    id: 22,
     title: "Zucchini",
     img: "zucchini.jpg",
     category: "Favorite"
   },
   {
-    id: 7,
+    id: 23,
     title: "Quinoa Salad",
     img: "quinoa_salad.jpg",
     category: "Favorite"
   },
   {
-    id: 8,
+    id: 24,
     title: "Ceasar Salad",
     img: "ceasar-salad.jpg",
     category: "Favorite"

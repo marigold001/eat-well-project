@@ -1,0 +1,19 @@
+@media only screen and (min-width: 1024px) {
+  .lg_grid_cols_3 {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 1536px) {
+  .increase_text_size_2xlscreen {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+}
+
+/* .slick-prev {
+  font-size: 22px;
+}
+.slick-next {
+  font-size: 22px;
+} */

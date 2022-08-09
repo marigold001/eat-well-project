@@ -1,0 +1,24 @@
+.position-small-circle {
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    top: 5%;
+    left: 68%;
+}
+
+.position-bigger-circle {
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    top: 30%;
+    left: 63%;
+}
+
+.position-middle-circle {
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    top: 70%;
+    left: 30%;
+}
+
+.animation:hover {
+    transform: scale(0.8);
+}

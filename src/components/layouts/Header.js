@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
+import "./Header.css";
 
 function showMenu() {
   const menu_items = document.querySelectorAll("a.show_m_navigation");
@@ -15,56 +16,72 @@ function showMenu() {
 
 export function Header(props) {
   return (
-    <div className="text-stone-900 container mx-auto mb-10 mt-10">
+    <div className=" container mx-auto mb-0 xl:mb-4">
       <img
-        src={require("../assets/images/logo.png")}
+        src={require("../../assets/images/logo.png")}
         alt="Logo"
         className="w-36 h-36 mx-auto"
       />
       {/* <h1 className="underline font-bold md:ml-14 text-5xl font-mono">{props.websitename}</h1> */}
       <nav className="md:flex items-center justify-center mt-2">
-        <ul className="md:text-lg lg:text-2xl text-2xl italic font-serif">
-          <li className="lg:mx-6 md:mx-4 md:inline-block ">
+        <ul className="increaseFontSize font-serif">
+          <li className="lg:mx-6 md:mx-4 lg:inline-block ">
             <Link
               to="/"
-              className="hide_main_menu text-stone-500/75 hover:text-stone-700"
+              className="hide_main_menu text-amber-200"
             >
               HOME
             </Link>
           </li>
-          <li className="lg:mx-6 md:mx-4 md:inline-block ">
+          <li className="lg:mx-6 md:mx-4 lg:inline-block ">
             <Link
               to="/recipes"
-              className="hide_main_menu text-stone-500/75 hover:text-stone-700"
+              className="hide_main_menu text-amber-300"
             >
-              RECIPES
+              DEVELOPMENT
             </Link>
           </li>
-          <li className="lg:mx-6 md:mx-4 md:inline-block ">
+          <li className="lg:mx-6 md:mx-4 lg:inline-block ">
             <a
               href="#"
-              className="hide_main_menu text-stone-500/75 hover:text-stone-700"
+              className="hide_main_menu text-amber-400"
             >
               CLASSES
             </a>
           </li>
-          <li className="lg:mx-6 md:mx-4 md:inline-block ">
+          <li className="lg:mx-6 md:mx-4 lg:inline-block ">
             <a
               href="#"
-              className="hide_main_menu text-stone-500/75 hover:text-stone-700"
+              className="hide_main_menu text-amber-500"
             >
-              DEVELOPMENT
+              GUIDANCE
             </a>
           </li>
-          <li className="lg:mx-6 md:mx-4 md:inline-block ">
+          <li className="lg:mx-6 md:mx-4 lg:inline-block ">
             <a
               href="#"
-              className="hide_main_menu text-stone-500/75 hover:text-stone-700"
+              className="hide_main_menu text-amber-600"
+            >
+              RECIPES
+            </a>
+          </li>
+          <li className="lg:mx-6 md:mx-4 lg:inline-block ">
+            <a
+              href="#"
+              className="hide_main_menu text-amber-700"
+            >
+              ABOUT
+            </a>
+          </li>
+          <li className="lg:mx-6 md:mx-4 lg:inline-block ">
+            <a
+              href="#"
+              className="hide_main_menu text-amber-800"
             >
               CONTACT
             </a>
           </li>
-          <li className="lg:mx-6 md:mx-4 md:inline-block ">
+          <li className="lg:mx-6 md:mx-4 lg:inline-block ">
             <a href="#" onClick={showMenu} className="burger_menu">
               <FontAwesomeIcon icon="fa-solid fa-bars" className="w-12 h-12" />
             </a>
@@ -76,7 +93,7 @@ export function Header(props) {
           </li>
           <li>
             <Link to="/about" className="show_m_navigation">
-              Recipes
+              Development
             </Link>
           </li>
           <li>
@@ -86,7 +103,17 @@ export function Header(props) {
           </li>
           <li>
             <a href="#" className="show_m_navigation">
-              Development
+              Guidance
+            </a>
+          </li>
+          <li>
+            <a href="#" className="show_m_navigation">
+              Recipes
+            </a>
+          </li>
+          <li>
+            <a href="#" className="show_m_navigation">
+              About
             </a>
           </li>
           <li>

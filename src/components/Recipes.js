@@ -1,19 +1,20 @@
-import { getRecipes } from "../../recipes";
+import { getRecipes } from "../recipes";
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "./Recipes.css";
 
 export function Recipes() {
   let RECIPES = getRecipes();
 
   const [category, setCategory] = useState("All");
   const [search, setSearch] = useState("");
-
-  const handleButtonClick = (event) => {
+  let filteredRecipes;
+  const showCategoryResults = (event) => {
     setCategory(event.currentTarget.innerHTML);
   };
 
-  const handleSearch = (event) => {
+  const showSearchResults = (event) => {
     setSearch(event.currentTarget.value);
   };
 
@@ -51,7 +52,7 @@ export function Recipes() {
         <div>
           <h3 className="text-2xl mt-6">Recipes: {category}</h3>
 
-          <div className="float-left">
+          <div className="">
             <label htmlFor="search" className="text-xl font-bold">
               Search:{" "}
             </label>
@@ -60,7 +61,7 @@ export function Recipes() {
               placeholder="Search"
               id="search"
               className="border border-black px-2 py-4 mt-2 ml-4 mb-6"
-              onChange={handleSearch}
+              onChange={showSearchResults}
             />
           </div>
           <div className="clear-both lg:hidden">
@@ -75,55 +76,55 @@ export function Recipes() {
                   Categories
                 </div>
                 <button
-                  onClick={handleButtonClick}
+                  onClick={showCategoryResults}
                   className="p-4 rounded-none border-2 border-solid bg-stone-700 hover:bg-stone-500 text-white text-xl"
                 >
                   All
                 </button>
                 <button
-                  onClick={handleButtonClick}
+                  onClick={showCategoryResults}
                   className="p-4 rounded-none border-2 border-solid bg-stone-700 hover:bg-stone-500 text-white text-xl"
                 >
                   Vegetarian
                 </button>
                 <button
-                  onClick={handleButtonClick}
+                  onClick={showCategoryResults}
                   className="p-4 rounded-none border-2 border-solid bg-stone-700 hover:bg-stone-500 text-white text-xl"
                 >
                   Dinner
                 </button>
                 <button
-                  onClick={handleButtonClick}
+                  onClick={showCategoryResults}
                   className="p-4 rounded-none border-2 border-solid bg-stone-700 hover:bg-stone-500 text-white text-xl"
                 >
                   Meat
                 </button>
                 <button
-                  onClick={handleButtonClick}
+                  onClick={showCategoryResults}
                   className="p-4 rounded-none border-2 border-solid bg-stone-700 hover:bg-stone-500 text-white text-xl"
                 >
                   Vegetables
                 </button>
                 <button
-                  onClick={handleButtonClick}
+                  onClick={showCategoryResults}
                   className="p-4 rounded-none border-2 border-solid bg-stone-700 hover:bg-stone-500 text-white text-xl"
                 >
                   Sides
                 </button>
                 <button
-                  onClick={handleButtonClick}
+                  onClick={showCategoryResults}
                   className="p-4 rounded-none border-2 border-solid bg-stone-700 hover:bg-stone-500 text-white text-xl"
                 >
                   Medditeranean
                 </button>
                 <button
-                  onClick={handleButtonClick}
+                  onClick={showCategoryResults}
                   className="p-4 rounded-none border-2 border-solid bg-stone-700 hover:bg-stone-500 text-white text-xl"
                 >
                   Keto
                 </button>
                 <button
-                  onClick={handleButtonClick}
+                  onClick={showCategoryResults}
                   className="p-4 rounded-none border-2 border-solid bg-stone-700 hover:bg-stone-500 text-white text-xl"
                 >
                   Plant-Based
@@ -131,16 +132,19 @@ export function Recipes() {
               </div>
             </div>
             <div className="grid auto-cols-min grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mx-4 gap-12 clear-left">
-              {RECIPES.filter(
-                (recipe) =>
+              {/* category is a state variable */}
+
+              {RECIPES.filter((recipe, index, array) => {
+                return (
                   (recipe.category == category || category == "All") &&
                   recipe.title.includes(search)
-              ).map((recipe, id) => {
+                );
+              }).map((recipe) => {
                 return (
                   <div key={recipe.id} className="h-80">
                     <Link to={`${recipe.id}`}>
                       <img
-                        src={require(`./../../assets/images/recipes/${recipe.img}`)}
+                        src={require(`./../assets/images/recipes/${recipe.img}`)}
                         alt={recipe.title}
                         className="object-cover w-full h-full"
                       />
@@ -157,55 +161,55 @@ export function Recipes() {
             <h3 className="text-xl font-bold mt-24">Categories</h3>
 
             <button
-              onClick={handleButtonClick}
+              onClick={showCategoryResults}
               className="p-4 rounded-none border-2 border-solid bg-stone-700 hover:bg-stone-500 text-white text-xl"
             >
               All
             </button>
             <button
-              onClick={handleButtonClick}
+              onClick={showCategoryResults}
               className="p-4 rounded-none border-2 border-solid bg-stone-700 hover:bg-stone-500 text-white text-xl"
             >
               Vegetarian
             </button>
             <button
-              onClick={handleButtonClick}
+              onClick={showCategoryResults}
               className="p-4 rounded-none border-2 border-solid bg-stone-700 hover:bg-stone-500 text-white text-xl"
             >
               Dinner
             </button>
             <button
-              onClick={handleButtonClick}
+              onClick={showCategoryResults}
               className="p-4 rounded-none border-2 border-solid bg-stone-700 hover:bg-stone-500 text-white text-xl"
             >
               Meat
             </button>
             <button
-              onClick={handleButtonClick}
+              onClick={showCategoryResults}
               className="p-4 rounded-none border-2 border-solid bg-stone-700 hover:bg-stone-500 text-white text-xl"
             >
               Vegetables
             </button>
             <button
-              onClick={handleButtonClick}
+              onClick={showCategoryResults}
               className="p-4 rounded-none border-2 border-solid bg-stone-700 hover:bg-stone-500 text-white text-xl"
             >
               Sides
             </button>
             <button
-              onClick={handleButtonClick}
+              onClick={showCategoryResults}
               className="p-4 rounded-none border-2 border-solid bg-stone-700 hover:bg-stone-500 text-white text-xl"
             >
               Medditeranean
             </button>
             <button
-              onClick={handleButtonClick}
+              onClick={showCategoryResults}
               className="p-4 rounded-none border-2 border-solid bg-stone-700 hover:bg-stone-500 text-white text-xl"
             >
               Keto
             </button>
             <button
-              onClick={handleButtonClick}
+              onClick={showCategoryResults}
               className="p-4 rounded-none border-2 border-solid bg-stone-700 hover:bg-stone-500 text-white text-xl"
             >
               Plant-Based

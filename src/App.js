@@ -1,11 +1,11 @@
 import "./App.css";
 
 // REACT COMPONENTS
-import { Header } from "./components/Header";
-import { FrontPage } from './components/pages/FrontPage';
-import { About } from './components/pages/About';
-import { Recipes } from './components/pages/Recipes'; 
-import { Recipe } from './components/pages/recipe/Recipe';
+import { Header } from "./components/layouts/Header";
+import { FrontPage } from './components/FrontPage';
+import { About } from './components/About';
+import { Recipes } from './components/Recipes'; 
+import { Recipe } from './components/recipe-page/Recipe';
 
 // DATA
 import { getRecipes } from "./recipes";

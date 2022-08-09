@@ -1,0 +1,27 @@
+.show_m_navigation {
+    display: none;
+  }
+  .burger_menu {
+    display: none;
+  }
+  
+  @media only screen and (max-width: 525px) {
+    .burger_menu {
+      display: block;
+      color: #000;
+    }
+  
+    .hide_main_menu {
+      display: none;
+    }
+  }
+  
+  @media only screen and (min-width: 525px) {
+    .burger_menu {
+      display: none;
+    }
+  
+    .show_m_navigation {
+      display: none !important;
+    }
+  }
