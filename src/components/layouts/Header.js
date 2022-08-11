@@ -16,108 +16,87 @@ function showMenu() {
 
 export function Header(props) {
   return (
-    <div className=" container mx-auto mb-0 xl:mb-4">
+    <div className="container mx-auto mb-0 xl:mb-4 flex justify-between items-center">
       <img
         src={require("../../assets/images/logo.png")}
         alt="Logo"
-        className="w-36 h-36 mx-auto"
+        className="w-36 h-36 ml-6"
       />
       {/* <h1 className="underline font-bold md:ml-14 text-5xl font-mono">{props.websitename}</h1> */}
-      <nav className="md:flex items-center justify-center mt-2">
-        <ul className="increaseFontSize font-serif">
-          <li className="lg:mx-6 md:mx-4 lg:inline-block ">
-            <Link
-              to="/"
-              className="hide_main_menu text-amber-200"
-            >
+      <nav className=" mt-2">
+        <ul>
+          <li className="inline-block mx-2">
+            <Link to="/" className="hide_main_menu text-amber-200">
               HOME
             </Link>
           </li>
-          <li className="lg:mx-6 md:mx-4 lg:inline-block ">
-            <Link
-              to="/recipes"
-              className="hide_main_menu text-amber-300"
-            >
+          <li className="inline-block mx-2">
+            <Link to="/recipe-development" className="hide_main_menu text-amber-300">
               DEVELOPMENT
             </Link>
           </li>
-          <li className="lg:mx-6 md:mx-4 lg:inline-block ">
-            <a
-              href="#"
-              className="hide_main_menu text-amber-400"
-            >
+          <li className="inline-block mx-2">
+            <a href="#" className="hide_main_menu text-amber-400">
               CLASSES
             </a>
           </li>
-          <li className="lg:mx-6 md:mx-4 lg:inline-block ">
-            <a
-              href="#"
-              className="hide_main_menu text-amber-500"
-            >
+          <li className="inline-block mx-2">
+            <a href="#" className="hide_main_menu text-amber-500">
               GUIDANCE
             </a>
           </li>
-          <li className="lg:mx-6 md:mx-4 lg:inline-block ">
-            <a
-              href="#"
-              className="hide_main_menu text-amber-600"
-            >
+          <li className="inline-block mx-2">
+            <a href="#" className="hide_main_menu text-amber-600">
               RECIPES
             </a>
           </li>
-          <li className="lg:mx-6 md:mx-4 lg:inline-block ">
-            <a
-              href="#"
-              className="hide_main_menu text-amber-700"
-            >
+          <li className="inline-block mx-2">
+            <a href="#" className="hide_main_menu text-amber-700">
               ABOUT
             </a>
           </li>
-          <li className="lg:mx-6 md:mx-4 lg:inline-block ">
-            <a
-              href="#"
-              className="hide_main_menu text-amber-800"
-            >
+          <li className="inline-block mx-2">
+            <a href="#" className="hide_main_menu text-amber-800">
               CONTACT
             </a>
           </li>
-          <li className="lg:mx-6 md:mx-4 lg:inline-block ">
-            <a href="#" onClick={showMenu} className="burger_menu">
-              <FontAwesomeIcon icon="fa-solid fa-bars" className="w-12 h-12" />
-            </a>
-          </li>
+        </ul>
+        <a href="#" onClick={showMenu} className="burger_menu">
+          <FontAwesomeIcon icon="fa-solid fa-bars" className="w-12 h-12" />
+        </a>
+        <ul className="absolute right-1 bg-amber-400">
           <li>
-            <Link to="/" className="show_m_navigation">
+            <Link to="/" className="show_m_navigation p-2">
               Home
             </Link>
           </li>
           <li>
-            <Link to="/about" className="show_m_navigation">
+            <Link to="/about" className="show_m_navigation p-2">
               Development
             </Link>
           </li>
           <li>
-            <a href="#" className="show_m_navigation">
+            <a href="#" className="show_m_navigation p-2">
               Classes
             </a>
           </li>
           <li>
-            <a href="#" className="show_m_navigation">
+            <a href="#" className="show_m_navigation p-2">
               Guidance
             </a>
           </li>
           <li>
-            <a href="#" className="show_m_navigation">
+            <a href="#" className="show_m_navigation p-2">
               Recipes
             </a>
           </li>
           <li>
-            <a href="#" className="show_m_navigation">
+            <a href="#" className="show_m_navigation p-2">
               About
             </a>
           </li>
           <li>
-            <a href="#" className="show_m_navigation">
+            <a href="#" className="show_m_navigation p-2">
               Contact
             </a>
           </li>

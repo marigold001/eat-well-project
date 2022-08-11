@@ -22,6 +22,7 @@ export function FrontPageRecipes(props) {
       
     ]
   };
+  document.title = "Katherine a nutritionist and recipe developer";
   return (
     // style={{backgroundColor: "#2C1A2B"}}
     <div className="container mx-auto pb-6 mb-6">

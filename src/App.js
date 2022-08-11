@@ -6,7 +6,7 @@ import { FrontPage } from './components/FrontPage';
 import { About } from './components/About';
 import { Recipes } from './components/Recipes'; 
 import { Recipe } from './components/recipe-page/Recipe';
-
+import { RecipeDevelopment } from "./components/RecipeDevelopment";
 // DATA
 import { getRecipes } from "./recipes";
 
@@ -23,9 +23,10 @@ let recipes = getRecipes();
 function App() {
   return (
     <div className="App">
-      <Header websitename="Healthy Eating" />
+      <Header />
       <Routes>
         <Route path="/" element={<FrontPage data={recipes}/>} />
+        <Route path="/recipe-development" element={<RecipeDevelopment />} />
         <Route path="/recipes" element={<Recipes />} />
         <Route path="/recipes">
           <Route path=":recipe" element={<Recipe />}/>
