@@ -20,7 +20,7 @@ export function Header(props) {
       <img
         src={require("../../assets/images/logo.png")}
         alt="Logo"
-        className="w-36 h-36 ml-6"
+        className="w-48 mt-4"
       />
       {/* <h1 className="underline font-bold md:ml-14 text-5xl font-mono">{props.websitename}</h1> */}
       <nav className=" mt-2">

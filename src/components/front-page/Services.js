@@ -26,11 +26,13 @@ export function Services() {
       <div className="container mx-auto  grid grid-cols-1 lg:grid-cols-3">
         <div className="w-4/5 mx-auto">
           <h4 className="mb-4 ">RECIPE DEVELOPMENT</h4>
-          <img
-            src={require("./../../assets/images/isolated-tomato.jpg")}
-            alt="Recipe Development"
-            className="2xl:max-w-sm animation"
-          />
+          <div className="inline-block overflow-hidden">
+            <img
+              src={require("./../../assets/images/isolated-tomato.jpg")}
+              alt="Recipe Development"
+              className="2xl:max-w-sm animation"
+            />
+          </div>
           <p className=" mt-4">
             Becoming a professional in nutrition and diets and having made more
             than 200 healthy tested <a href="">recipes</a>. Katherine has proven
@@ -40,11 +42,13 @@ export function Services() {
 
         <div className="w-4/5 mx-auto">
           <h4 className="mb-4">COOKING CLASSES</h4>
-          <img
-            src={require("./../../assets/images/isolated-broccoli.jpg")}
-            alt="Cooking Classes"
-            className="2xl:max-w-sm animation" 
-          />
+          <div className="inline-block overflow-hidden">
+            <img
+              src={require("./../../assets/images/isolated-broccoli.jpg")}
+              alt="Cooking Classes"
+              className="2xl:max-w-sm animation"
+            />
+          </div>
           <p className=" mt-4">
             On the classes you will learn about food nutrition, cooking
             techniques, serving and decorating, and make food combinations you
@@ -54,11 +58,13 @@ export function Services() {
 
         <div className="w-4/5 mx-auto">
           <h4 className="mb-4">HEALTHY EATING</h4>
-          <img
-            src={require("./../../assets/images/isolated-pomegranate.jpg")}
-            alt="Healthy Eating"
-            className="2xl:max-w-sm animation"
-          />
+          <div className="inline-block overflow-hidden">
+            <img
+              src={require("./../../assets/images/isolated-pomegranate.jpg")}
+              alt="Healthy Eating"
+              className="2xl:max-w-sm animation"
+            />
+          </div>
           <p className="mt-4 testing">
             Get life lasting experience and learn everything about Nutrient
             Density, Diversity, Macronutrients, and Food Basics.

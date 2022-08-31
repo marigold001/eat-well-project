@@ -19,6 +19,10 @@
     left: 30%;
 }
 
+.animation {
+    transition: all .2s ease;
+}
+
 .animation:hover {
-    transform: scale(0.8);
+    transform: scale(1.2);
 }

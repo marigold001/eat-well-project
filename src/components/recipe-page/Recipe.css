@@ -11,6 +11,10 @@
   }
 }
 
+#background-image-recipe {
+  background-image: url("/src/assets/images/recipes/ceasar-salad.jpg");
+}
+
 /* .slick-prev {
   font-size: 22px;
 }
